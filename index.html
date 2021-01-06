@@ -5,23 +5,24 @@
     <title>JavaScript-инженер</title>
     <link rel="stylesheet" href="./styles/editor.css" />
     <link rel="stylesheet" href="./styles/page.css" />
-  </head>
+    
+  </head>  
   <body>
     <div class="container">
       <main class="papercard">
         <div class="editor">
-          <div class="edit-area" placeholder="Type something..."></div>
+          <div class="edit-area" placeholder="Type something..." contenteditable onchange="cEscape"></div>
           <div class="toolkit">
-            <button class="head-1">
+            <button class="head-1" data-role='h1'>
               <img src="assets/icons_h1.svg" alt="Head 1 button icon" />
             </button>
-            <button class="head-2">
+            <button class="head-2" data-role='h2'>
               <img src="assets/icons_h2.svg" alt="Head 2 button icon" />
             </button>
-            <button class="bold">
+            <button class="bold" data-role='bold'>
               <img src="assets/icons_bold.svg" alt="Bold button icon" />
-            </button>
-            <button class="italic">
+            </button>  
+            <button class="italic" data-role='italic'>
               <img src="assets/icons_italic.svg" alt="Italic button icon" />
             </button>
           </div>
@@ -37,4 +38,7 @@
       </footer>
     </div>
   </body>
+  <script src="index.js"></script>  
+  <script src="escape.js"></script>
+
 </html>
