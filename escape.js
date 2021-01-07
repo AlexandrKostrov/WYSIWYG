@@ -11,8 +11,14 @@ function escape(str) {
 const editableArea = document.querySelector(".edit-area");
 
 editableArea.addEventListener("input", function(event) {
-    console.log("input event fired");
-    console.log(event);
-    console.log(editableArea.innerHTML);
-    editableArea.innerHTML = escape(editableArea.innerHTML);
-}, false);
+    const edetiableAreaContent = editableArea.innerHTML;
+    console.log(edetiableAreaContent);
+    edetiableAreaContent.textContent = escape(editableArea.textContent);  
+    editableArea.innerHTML = edetiableAreaContent;    
+    editableArea.focus();   
+   
+    setTimeout(() => {  
+        document.execCommand('selectAll', false, null);
+        document.getSelection().collapseToEnd(); 
+    },0);
+}, false);    

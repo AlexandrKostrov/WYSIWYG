@@ -1,4 +1,6 @@
 (function() {
+  const editableArea = document.querySelector(".edit-area");
+
    Array.from(document.querySelectorAll('.toolkit button')).forEach(button => {
      button.addEventListener('click', function(e) {
         console.log(this.dataset);
@@ -12,8 +14,7 @@
             document.execCommand(this.dataset['role'], false, null);
             break;
         }  
-        
-      }) 
-   }) 
+      });
+   });
   })();
 
